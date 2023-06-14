@@ -89,13 +89,13 @@ function draw() {
 
     kangaroo.collide(invisibleGround);
     //escreva uma condição para que o estado do jogo mude para end (fim).
-    if(kangaroo.collide(obstaclesGroup) || kangaroo.collide(shrubsGroup)) {
+    if(kangaroo.collide(obstaclesGroup)) {
       collidedSound.play();
       gameState = END;
     }
     //escreva uma condição para a pontuação aumentar
-    if() {
-      score = score + 5;
+    if(kangaroo.collide(shrubsGroup)) {
+      score = score + 1;
       shrubsGroup.destroyEach();
     }
   
